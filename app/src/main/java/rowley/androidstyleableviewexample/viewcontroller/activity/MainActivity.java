@@ -1,7 +1,9 @@
-package rowley.androidstyleableviewexample;
+package rowley.androidstyleableviewexample.viewcontroller.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import rowley.androidstyleableviewexample.R;
 
 public class MainActivity extends AppCompatActivity {
 
