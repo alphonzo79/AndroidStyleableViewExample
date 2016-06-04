@@ -14,7 +14,7 @@
     <rowley.androidstyleableviewexample.view.ComplexEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:rootBackground="@color/purple"
+        android:background="@color/purple"
         app:highLighBarBackground="#ffFFFF00"
         app:labelText="Label"
         app:inputHintText="@string/app_name"
@@ -26,7 +26,6 @@
     <rowley.androidstyleableviewexample.view.ComplexEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:rootBackground="@color/color_state_list"
         app:highLighBarBackground="#ffFFFF00"
         app:labelText="Label"
         app:inputHintText="@string/app_name"
