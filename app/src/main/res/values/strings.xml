@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AndroidStyleableViewExample</string>
+
+    <string name="first_name_label">First Name</string>
+    <string name="error_message">There is an error in your input</string>
+    <string name="email_hint_text">E-mail Address</string>
+    <string name="disabled_view">Disabled View</string>
+    <string name="last_name_label">Last Name</string>
 </resources>

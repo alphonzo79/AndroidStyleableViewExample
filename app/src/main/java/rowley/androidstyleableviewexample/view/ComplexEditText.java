@@ -2,6 +2,7 @@ package rowley.androidstyleableviewexample.view;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.ColorInt;
@@ -9,6 +10,7 @@ import android.support.annotation.DrawableRes;
 import android.support.annotation.StringRes;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -30,8 +32,6 @@ public class ComplexEditText extends RelativeLayout implements View.OnFocusChang
     @Bind(R.id.input)
     EditText input;
 
-    private boolean enabled = true;
-
     public ComplexEditText(Context context) {
         super(context);
         initView(context, null);
@@ -51,6 +51,8 @@ public class ComplexEditText extends RelativeLayout implements View.OnFocusChang
         inflate(context, R.layout.complex_edit_text, this);
         ButterKnife.bind(this);
 
+        boolean enabled = true;
+
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ComplexEditText);
         for(int i = 0; i < typedArray.getIndexCount(); i++) {
             int attr = typedArray.getIndex(i);
@@ -61,7 +63,7 @@ public class ComplexEditText extends RelativeLayout implements View.OnFocusChang
                         if(color != -1) {
                             highLightBar.setBackgroundColor(color);
                         }
-                    } catch (UnsupportedOperationException e) {
+                    } catch (UnsupportedOperationException |Resources.NotFoundException e) {
                         e.printStackTrace();
                         try {
                             Drawable drawable = typedArray.getDrawable(attr);
@@ -94,26 +96,21 @@ public class ComplexEditText extends RelativeLayout implements View.OnFocusChang
                 case R.styleable.ComplexEditText_inputTextColor:
                     input.setTextColor(typedArray.getColorStateList(attr));
                     break;
+                case R.styleable.ComplexEditText_inputType:
+                    input.setInputType(typedArray.getInt(attr, EditorInfo.TYPE_TEXT_VARIATION_NORMAL));
                 case R.styleable.ComplexEditText_enabled:
-                    setEnabled(typedArray.getBoolean(attr, enabled));
+                    enabled = typedArray.getBoolean(attr, enabled);
             }
         }
         typedArray.recycle();
 
+        setEnabled(enabled);
         input.setOnFocusChangeListener(this);
     }
 
     @Override
     public void onFocusChange(View view, boolean focused) {
         highLightBar.setActivated(focused);
-    }
-
-    /**
-     * Set the enabled state of the root layout, which is duplicated by the highlight bar
-     * @param enabled
-     */
-    public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
     }
 
     /**
@@ -234,5 +231,12 @@ public class ComplexEditText extends RelativeLayout implements View.OnFocusChang
      */
     public void setInputTextColor(ColorStateList colorStateList) {
         input.setTextColor(colorStateList);
+    }
+
+    /**
+     * Set the type of the content with a constant as defined for {@link EditorInfo#inputType}.
+     */
+    public void setInputType(int inputType) {
+        input.setInputType(inputType);
     }
 }

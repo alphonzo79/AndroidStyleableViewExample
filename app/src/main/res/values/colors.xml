@@ -4,4 +4,18 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="purple">#FFDD44FF</color>
+    <color name="yellow">#FFFFFF00</color>
+    <color name="red">#FFFF0000</color>
+    <color name="blue">#FF0000FF</color>
+    <color name="off_white">#FFEEEEEE</color>
+
+    <!--<color name="main_enabled">#33FFFFFF</color>-->
+    <!--<color name="main_disabled">#55AAAAAA</color>-->
+
+    <color name="main_enabled">#33FF00FF</color>
+    <color name="main_disabled">#55AAFF00</color>
+
+    <color name="bar_enabled">#FF6666FF</color>
+    <color name="bar_activated">#FF2222FF</color>
+    <color name="bar_disabled">#FFAAAAFF</color>
 </resources>

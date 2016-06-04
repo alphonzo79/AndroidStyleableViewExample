@@ -12,8 +12,7 @@
         android:layout_alignBottom="@+id/input"
         android:layout_marginEnd="7dp"
         android:layout_marginRight="7dp"
-        android:duplicateParentState="true"
-        android:background="@color/colorPrimary"/>
+        android:duplicateParentState="true"/>
 
     <TextView
         android:id="@+id/supplemental_text_view"
@@ -24,7 +23,6 @@
         android:layout_marginBottom="3dp"
         android:layout_marginTop="3dp"
         android:textSize="10sp"
-        android:textColor="@color/colorAccent"
         tools:text="Input Label"/>
 
     <EditText
@@ -36,6 +34,7 @@
         android:layout_below="@id/supplemental_text_view"
         android:paddingBottom="3dp"
         android:background="@android:color/transparent"
+        android:duplicateParentState="true"
         tools:text="Hint Text Goes Here" />
 
 </merge>

@@ -14,24 +14,42 @@
     <rowley.androidstyleableviewexample.view.ComplexEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/purple"
-        app:highLighBarBackground="#ffFFFF00"
-        app:labelText="Label"
-        app:inputHintText="@string/app_name"
-        app:labelTextColor="@android:color/darker_gray"
-        app:inputTextColor="@color/color_state_list"
-        app:labelTextSize="25sp"
-        />
+        app:labelText="@string/first_name_label"
+        app:labelTextColor="@color/yellow"
+        app:inputType="textCapWords"
+        app:highLighBarBackground="@android:color/transparent" />
 
     <rowley.androidstyleableviewexample.view.ComplexEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:highLighBarBackground="#ffFFFF00"
-        app:labelText="Label"
-        app:inputHintText="@string/app_name"
-        app:labelTextColor="@android:color/darker_gray"
-        app:inputTextColor="@color/purple"
-        app:labelTextSize="25sp"
-        />
+        android:layout_marginTop="10dp"
+        app:labelText="@string/error_message"
+        app:inputHintText="@string/last_name_label"
+        app:labelTextColor="@color/red"
+        app:highLighBarBackground="@color/blue"
+        android:background="@color/off_white"
+        app:inputType="textCapWords" />
+
+    <rowley.androidstyleableviewexample.view.ComplexEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:labelText="@string/email_hint_text"
+        app:inputHintText="@string/email_hint_text"
+        app:highLighBarBackground="@drawable/stateful_bar_background"
+        app:labelTextColor="@color/yellow"
+        android:background="@drawable/stateful_primary_background"
+        app:inputType="textEmailAddress" />
+
+    <rowley.androidstyleableviewexample.view.ComplexEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:labelText="@string/email_hint_text"
+        app:inputHintText="@string/email_hint_text"
+        app:highLighBarBackground="@drawable/stateful_bar_background"
+        android:background="@drawable/stateful_primary_background"
+        app:enabled="false"
+        app:inputType="textEmailAddress" />
 
 </LinearLayout>
