@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingEnd="7dp"
+    android:paddingRight="7dp">
+
+    <View
+        android:id="@+id/complex_edit_text_status_bar"
+        android:layout_width="7dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/input"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:duplicateParentState="true"
+        android:background="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/supplemental_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/complex_edit_text_status_bar"
+        android:layout_toRightOf="@id/complex_edit_text_status_bar"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:textSize="10sp"
+        android:textColor="@color/colorAccent"
+        tools:text="Input Label"/>
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/complex_edit_text_status_bar"
+        android:layout_toRightOf="@id/complex_edit_text_status_bar"
+        android:layout_below="@id/supplemental_text_view"
+        android:paddingBottom="3dp"
+        android:background="@android:color/transparent"
+        tools:text="Hint Text Goes Here" />
+
+</merge>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ComplexEditText">
+        <attr name="rootBackground" format="color|reference" />
+        <!-- A color or a reference to a color or drawable. The highlight bar duplicates the Parent's enabled state and the inner EditText's focused state -->
+        <attr name="highLighBarBackground" format="color|reference" />
+        <attr name="labelTextColor" format="color" />
+        <attr name="labelTextSize" format="dimension" />
+        <attr name="labelText" format="string|reference" />
+        <attr name="inputHintText" format="string|reference" />
+        <attr name="inputHintColor" format="color" />
+        <attr name="inputTextSize" format="dimension" />
+        <attr name="inputTextColor" format="color" />
+    </declare-styleable>
+</resources>
