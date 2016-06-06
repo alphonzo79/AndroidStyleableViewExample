@@ -9,6 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
+    android:background="@android:color/white"
     tools:context=".viewcontroller.activity.MainActivity">
 
     <rowley.androidstyleableviewexample.view.ComplexEditText
@@ -16,6 +17,7 @@
         android:layout_height="wrap_content"
         app:labelText="@string/first_name_label"
         app:labelTextColor="@color/yellow"
+        app:inputHintText="@string/first_name_label"
         app:inputType="textCapWords"
         app:highLighBarBackground="@android:color/transparent" />
 
@@ -24,7 +26,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         app:labelText="@string/error_message"
-        app:inputHintText="@string/last_name_label"
         app:labelTextColor="@color/red"
         app:highLighBarBackground="@color/blue"
         android:background="@color/off_white"
@@ -37,7 +38,7 @@
         app:labelText="@string/email_hint_text"
         app:inputHintText="@string/email_hint_text"
         app:highLighBarBackground="@drawable/stateful_bar_background"
-        app:labelTextColor="@color/yellow"
+        app:labelTextColor="@color/blue"
         android:background="@drawable/stateful_primary_background"
         app:inputType="textEmailAddress" />
 

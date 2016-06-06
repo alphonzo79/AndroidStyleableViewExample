@@ -13,7 +13,6 @@
         <attr name="enabled" format="boolean" />
 
         <!--Copy/Pasted from core attrs-->
-
         <attr name="inputType">
             <!-- There is no content type.  The text is not editable. -->
             <flag name="none" value="0x00000000" />

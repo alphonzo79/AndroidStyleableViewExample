@@ -24,6 +24,7 @@ import rowley.androidstyleableviewexample.R;
  * and a stateful highlight bar
  */
 public class ComplexEditText extends RelativeLayout implements View.OnFocusChangeListener {
+    private final String TAG = ComplexEditText.class.getSimpleName();
 
     @Bind(R.id.complex_edit_text_status_bar)
     View highLightBar;
@@ -98,8 +99,10 @@ public class ComplexEditText extends RelativeLayout implements View.OnFocusChang
                     break;
                 case R.styleable.ComplexEditText_inputType:
                     input.setInputType(typedArray.getInt(attr, EditorInfo.TYPE_TEXT_VARIATION_NORMAL));
+                    break;
                 case R.styleable.ComplexEditText_enabled:
                     enabled = typedArray.getBoolean(attr, enabled);
+                    break;
             }
         }
         typedArray.recycle();
@@ -109,8 +112,15 @@ public class ComplexEditText extends RelativeLayout implements View.OnFocusChang
     }
 
     @Override
+    public void setEnabled(boolean enabled) {
+        super.setEnabled(enabled);
+        input.setEnabled(enabled);
+    }
+
+    @Override
     public void onFocusChange(View view, boolean focused) {
-        highLightBar.setActivated(focused);
+        highLightBar.setSelected(focused);
+        setSelected(focused);
     }
 
     /**
