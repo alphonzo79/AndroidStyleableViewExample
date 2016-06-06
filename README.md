@@ -11,4 +11,10 @@ This project is built with AndroidStudio 2.1.1, Gradle plugin 2.1 and Gradle Wra
 | ButterKnife | Jake Wharton      | View Injection library |
 
 ## Background and Information
-Sometimes during development you find the need to wrap common or repeatedly-used UI elements into their own custom views so they can be easily reused and encapsulate their own logic. To make these views more flexible you might want to make them styleable. This allows you to configure and customize the view in the layout file independent of your other Java code.
+Sometimes during development you find the need to wrap common or repeatedly-used UI elements into their own custom views so they can be easily reused and encapsulate their own logic. To make these views more flexible you might want to make them styleable so you can configure and customize the view in the layout file independent of your other Java code.
+
+This simple sample demonstrates
+* Creating a custom view, `ComplexEditText`, which encompasses an `EditText`, a label or error `TextView` and a highlight or status bar. 
+* Declaring that view Styleable, along with its unique attributes in the `attrs.xml` file beyond those already provided by Android.
+* Consuming those attributes in an `init` method inside `ComplexEditText`
+* Including several instances of `ComplexEditText` inside the `activity_main.xml` layout and giving each instance different styling.
