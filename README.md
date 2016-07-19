@@ -1,5 +1,5 @@
 # AndroidStyleableViewExample
-This project is a simple example of how to create a styleable view in Android to accompany a presentation on the subject. The app itself does very little -- virtually nothing. The important part is in the custom views, the `attr.xml` file and the main activity layout file. The repo also contains the slides for the presentation. The slides can also be found [here] (www.slidedeck.com/alphonzo79/AndroidStyleableViewExample)
+This project is a simple example of how to create a styleable view in Android to accompany a presentation on the subject. The app itself does very little -- virtually nothing. The important part is in the custom views, the `attr.xml` file and the main activity layout file. The repo also contains the slides for the presentation. The slides can also be found [here] (https://speakerdeck.com/alphonzo79/android-styleable-custom-view)
 
 ## Setup and Dependencies
 This project is built with AndroidStudio 2.1.1, Gradle plugin 2.1 and Gradle Wrapper 2.10. As long as you have a sufficient version of AS installed and use the Gradle wrapper everything should work just fine. If you keep a local install of Gradle and use it for command-line work then you will either need to have a sufficient version of Gradle installed or tweak this setup to match your needs.
